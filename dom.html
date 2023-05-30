@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="hoc lap trinh, lap trinh," />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="name">Enter your name: </label>
+    <input type="text" id="name" value="Nguyễn Văn A" />
+    <input type="text" class="input" value="value input 1" />
+    <input type="text" class="input" value="value input 2" />
+    <input type="text" class="input" value="value input 3" />
+    <input type="text" class="input" value="value input 4" />
+    <button onclick="changeBackgroundColor()">Greeting</button>
+    <button onclick="alert('Hello world!')">Press me</button>
+
+    <script>
+      const elementName = document.querySelector("#name");
+      const elementButton = document.querySelector("button");
+      const elementClassInput = document.querySelectorAll(".input");
+
+      console.log(elementName.value);
+      console.log(elementButton.textContent);
+
+      console.log(elementClassInput[0].value);
+      console.log(elementClassInput[1].value);
+      console.log(elementClassInput[2].value);
+      console.log(elementClassInput[3].value);
+
+      function changeBackgroundColor() {
+        const randomColor =
+          "rgb(" +
+          Math.random() * 255 +
+          "," +
+          Math.random() * 255 +
+          "," +
+          Math.random() * 255 +
+          ")";
+        document.querySelector("body").style.backgroundColor = randomColor;
+      }
+    </script>
+  </body>
+</html>
